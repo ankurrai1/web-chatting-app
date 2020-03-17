@@ -1,6 +1,6 @@
-# web-chatting-app
 
-# ***web-chatting-app***
+# ***WEB-CHATTING-APP***
+----
 basic web-chatting-app allow to login and register with jwt auth.
 after login and register a user can find new user and groups to start chatting
 
