@@ -1,0 +1,12 @@
+{
+  "name": "login_api",
+  "version": "1.0.0",
+  "description": "simple login featur impilmented with jwt authenication",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+  }
+}
