@@ -3,7 +3,10 @@ const express = require("express");
 
 const app = express();
 
-let port = process.env.PORT ;
+let port = process.env.PORT;
+
+app.set('port', port);
+
 
 
 app.get('/', function(req, res){
