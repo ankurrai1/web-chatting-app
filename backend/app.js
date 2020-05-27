@@ -11,11 +11,4 @@ console.log(port, ": port");
 app.set('port', port);
 
 
-
-app.get('/', function(req, res){
-    res.send('<html>all is well...</html>');
-});
-
-
-
 module.exports = app;
