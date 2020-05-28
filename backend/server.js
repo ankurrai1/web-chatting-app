@@ -4,7 +4,8 @@ const socketio = require("socket.io");
 const app=require("./app.js");
 
 const server = http.createServer(app);
-const io = socketio(server);
+const io = app.io
+io.attach(server );
 
 const PORT = app.get("port");
 const environment = app.get("env");

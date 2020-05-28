@@ -1,9 +1,12 @@
 const express = require("express");
 const dotenv = require("dotenv");
+const socketio = require("socket.io");
 
 
 dotenv.config({path: ".env"});
 const app = express();
+
+const io  = app.io = socketio();
 
 let port = process.env.PORT;
 app.set('port', port);
