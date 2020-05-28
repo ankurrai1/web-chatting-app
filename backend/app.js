@@ -6,7 +6,11 @@ const socketio = require("socket.io");
 dotenv.config({path: ".env"});
 const app = express();
 
-const io  = app.io = socketio();
+let io  = app.io = socketio();
+
+io.on( "connection", function( socket ) {
+    console.log( "A user connected" );
+});
 
 let port = process.env.PORT;
 app.set('port', port);
