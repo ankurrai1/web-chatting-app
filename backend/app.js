@@ -10,6 +10,9 @@ let io  = app.io = socketio();
 
 io.on( "connection", function( socket ) {
     console.log( "A user connected" );
+    socket.on('disconnect', ()=>{
+        console.log("A user disconnected !!!");
+    })
 });
 
 let port = process.env.PORT;
