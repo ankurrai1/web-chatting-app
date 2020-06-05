@@ -10,6 +10,11 @@ let io  = app.io = socketio();
 
 io.on( "connection", function( socket ) {
     console.log( "A user connected" );
+
+    socket.on('join', ({name, room})=>{
+        console.log(name +"  " + room);
+    })
+
     socket.on('disconnect', ()=>{
         console.log("A user disconnected !!!");
     })
