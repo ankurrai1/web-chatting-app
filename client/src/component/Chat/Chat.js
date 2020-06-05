@@ -23,6 +23,11 @@ const Chat = ( { location } )=>{
 
         socket.emit('join', { name, room });
 
+        return ()=>{
+            socket.emit('disconnect');
+            socket.off(); // just switching off this users socket
+        }
+
     },[ ENDPOINT, location.search ]);
 
     return (
