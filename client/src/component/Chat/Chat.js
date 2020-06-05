@@ -20,7 +20,9 @@ const Chat = ( { location } )=>{
 
         setName(name);
         setRoom(room);
-    })
+
+        console.log(socket);
+    },[ ENDPOINT, location.search ]);
 
     return (
         <h1>Chat</h1>
