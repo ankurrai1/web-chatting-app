@@ -29,3 +29,6 @@ const getUsersInRoom = function(room){
     room = room.trim().toLowerCase();
     return Users.filter(user => user.room === room);
 }
+
+
+module.exports = {addUser, getUser, getUsersInRoom, removeUser};
