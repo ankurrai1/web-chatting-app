@@ -24,3 +24,8 @@ const removeUser = function(id) {
 const getUser = function(id){
     return Users.find(user => user.id === id);
 }
+
+const getUsersInRoom = function(room){
+    room = room.trim().toLowerCase();
+    return Users.filter(user => user.room === room);
+}
