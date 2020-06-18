@@ -11,10 +11,8 @@ let io  = app.io = socketio();
 const {addUser, getUser, getUsersInRoom, removeUser}; = require("./src/Models/User");
 
 io.on( "connection", function( socket ) {
-    console.log( "A user connected" );
-
     socket.on('join', ({name, room})=>{
-        console.log(name +"  " + room);
+        const{error, user} = addUser({id :socket.id, name, room})
     })
 
     socket.on('disconnect', ()=>{
