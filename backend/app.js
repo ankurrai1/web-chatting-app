@@ -23,6 +23,11 @@ io.on( "connection", function( socket ) {
 let port = process.env.PORT;
 app.set('port', port);
 
+
+const user = require('./src/Routers/user');
+
+app.use(user);
+
 app.get('/', function(req, res){ 
     res.send('<html>all is well...</html>');
 });
