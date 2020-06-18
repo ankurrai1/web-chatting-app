@@ -8,11 +8,12 @@ const app = express();
 
 let io  = app.io = socketio();
 
-const {addUser, getUser, getUsersInRoom, removeUser}; = require("./src/Models/User");
+const {addUser, getUser, getUsersInRoom, removeUser} = require("./src/Models/User");
 
 io.on( "connection", function( socket ) {
     socket.on('join', ({name, room})=>{
         const{error, user} = addUser({id :socket.id, name, room})
+        if(error) return callback({error});
     })
 
     socket.on('disconnect', ()=>{
