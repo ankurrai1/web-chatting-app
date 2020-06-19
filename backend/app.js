@@ -17,8 +17,9 @@ io.on( "connection", function( socket ) {
         socket.emit("message",{user : "Admin", text :`Welcome ${user.name} to ${ user.room} group !!`});
         socket.broadcast.to(user.room).emit("message", {user : "Admin",text :`${user.name}, has joined`});
         socket.join(user.room);
-    })
 
+        callback();
+    })
     socket.on('disconnect', ()=>{
         console.log("A user disconnected !!!");
     })
