@@ -11,6 +11,8 @@ const Chat = ( { location } )=>{
 
     const [name, setName] = useState('');
     const [room, setRoom] = useState('');
+    const [messages, setMessages] = useState([]);
+    const [message, setMessage] = useState('');
     const ENDPOINT = "localhost:9000";
 
     useEffect(()=>{
@@ -29,6 +31,12 @@ const Chat = ( { location } )=>{
         }
 
     },[ ENDPOINT, location.search ]);
+
+    useEffect(()=>{
+        socket.on('message', (message)=>{
+            setMessage([...messages , message]);
+        })
+    },[message]);
 
     return (
         <h1>Chat</h1>
