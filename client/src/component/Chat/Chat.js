@@ -39,7 +39,11 @@ const Chat = ( { location } )=>{
     },[message]);
 
     return (
-        <h1>Chat</h1>
+        <div className ="outerContainer">
+            <div className="container">
+                
+            </div>
+        </div>
     )
 }
 
