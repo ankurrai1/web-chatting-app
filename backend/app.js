@@ -14,6 +14,7 @@ io.on( "connection", function( socket ) {
     socket.on('join', ({name, room})=>{
         const{error, user} = addUser({id :socket.id, name, room})
         if(error) return callback({error});
+        socket.emit("message",{user : "Admin", text :`Welcome ${user.name} to ${ user.room} group !!`})
         socket.join(user.room);
     })
 
