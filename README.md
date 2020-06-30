@@ -45,15 +45,3 @@ cd client
 
 npm start
 ```
-
-To Start client and backend together Need Docker
-
-steps for Docker
-----
-
-```
-npm install
-docker-compose up --build
-docker-compose up -d
-docker-compose up
-```
