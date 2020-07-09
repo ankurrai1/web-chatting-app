@@ -17,6 +17,7 @@ io.on( "connection", function( socket ) {
         socket.emit("message",{user : "Admin", text :`Welcome ${user.name} to ${ user.room} group !!`});
         socket.broadcast.to(user.room).emit("message", {user : "Admin",text :`${user.name}, has joined`});
         socket.join(user.room);
+        io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) });
 
         callback();
     })
@@ -35,7 +36,7 @@ io.on( "connection", function( socket ) {
           io.to(user.room).emit('message', { user: 'Admin', text: `${user.name} has left.` });
           io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room)});
         }
-        
+
       })
 });
 
