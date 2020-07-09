@@ -2,6 +2,8 @@ import React from 'react';
 
 import './Message.css';
 
+
+// for emoji sending
 import ReactEmoji from 'react-emoji';
 
 const Message = ({ message: { text, user }, name }) => {
