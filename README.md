@@ -41,9 +41,10 @@ cd backend
 npm start
 ```
 
-to Start angular app
+to Start Recat app
 ```
 cd client
 
 npm start
 ```
+#### [Live Demo of Chatting app](https://web-based-chatting-app.netlify.app)
