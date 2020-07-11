@@ -10,7 +10,6 @@ const addUser = function({id, name, room}){
   
     const user = {id,  name, room};
     Users.push(user);
-    console.log(Users,"   ", user, ":  from user model") 
     return {user};
 }
 
