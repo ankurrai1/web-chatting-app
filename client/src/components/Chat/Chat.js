@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { Redirect } from 'react-router-dom'
+
 import queryString from 'query-string';
 import io from "socket.io-client";
 
@@ -8,6 +10,7 @@ import InfoBar from '../InfoBar/InfoBar';
 import Input from '../Input/Input';
 
 import './Chat.css';
+import { Link } from "react-router-dom";
 
 let socket;
 
@@ -17,7 +20,8 @@ const Chat = ({ location }) => {
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const ENDPOINT = 'localhost:9000';
+  // const ENDPOINT = 'localhost:9000';
+  const ENDPOINT = 'https://chat-app-server0.herokuapp.com/';
 
   useEffect(() => {
     const { name, room } = queryString.parse(location.search);
@@ -29,7 +33,8 @@ const Chat = ({ location }) => {
 
     socket.emit('join', { name, room }, (error) => {
       if(error) {
-        alert(error);
+        alert(error.error);
+        return <Redirect to='/' />;
       }
     });
   }, [ENDPOINT, location.search]);
