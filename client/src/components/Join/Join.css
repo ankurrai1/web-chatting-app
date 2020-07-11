@@ -2,6 +2,9 @@ html, body {
   font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
+  background: #FEAC5E;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #4BC0C8, #C779D0, #FEAC5E); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #root {
@@ -18,31 +21,47 @@ html, body {
   text-align: center;
   height: 100vh;
   align-items: center;
-  background-color: #1A1A1D;
+  /* background-color: #fff; */
 }
 
 .joinInnerContainer {
   width: 20%;
 }
+input:focus, textarea:focus, select:focus{
+  outline: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
 
 .joinInput {
-  border-radius: 0;
+  font-size: x-large;
+  font-weight: 900;
+  font-style: inherit;
+  outline: none;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  /* background-color: #fff; */
+  background: transparent;
+  border-bottom: 2px solid hsl(273, 100%, 79%);
   padding: 15px 20px;
   width: 100%;
 }
 
 .heading {
-  color: white;
+  color: hsl(273, 32%, 54%);
   font-size: 2.5em;
-  padding-bottom: 10px;
-  border-bottom: 2px solid white;
+  /* border-bottom: 2px solid hsl(273, 100%, 79%); */
 }
 
 .button {
     color: #fff !important;
     text-transform: uppercase;
     text-decoration: none;
-    background: #2979FF;
+    background: hsl(273, 100%, 79%);
+    font-size: x-large;
+    font-weight: 600;
     padding: 20px;
     border-radius: 5px;
     display: inline-block;

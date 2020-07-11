@@ -7,7 +7,7 @@ import './TextContainer.css';
 const TextContainer = ({ users }) => (
   <div className="textContainer">
     <div>
-      <h1> Webbased Chatting Application<span role="img" aria-label="emoji">💬</span></h1>
+      <h1> Web based Chatting Application<span role="img" aria-label="emoji">💬</span></h1>
       <h2>React, Express, Node and Socket.IO Tech Stacks are used <span role="img" aria-label="emoji">❤️</span></h2>
       <h2>Start using <span role="img" aria-label="emoji">⬅️</span></h2>
     </div>

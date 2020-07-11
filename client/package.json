@@ -1,5 +1,5 @@
 {
-  "name": "project_chat_application",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,5 +40,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^1.7.0"
-  }
+  },
+  "author": "ankurrai1",
+  "license": "ISC"
 }
