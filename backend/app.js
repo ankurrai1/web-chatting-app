@@ -1,10 +1,12 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const socketio = require("socket.io");
+const cors = require('cors');
 
 
 dotenv.config({path: ".env"});
 const app = express();
+app.use(cors());
 
 let io  = app.io = socketio();
 
