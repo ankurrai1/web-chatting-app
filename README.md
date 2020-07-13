@@ -4,7 +4,7 @@
 basic web-chatting-app allow to login and register with jwt auth.
 after login and register a user can find new user and groups to start chatting
 
-This is the open source express js based app to example of basic chatting feature in Mean-Stack.
+This is the open source express js based app to example of basic chatting feature in MERN-Stack.
 
 # Installation
 
