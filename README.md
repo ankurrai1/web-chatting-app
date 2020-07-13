@@ -11,7 +11,6 @@ This is the open source express js based app to example of basic chatting featur
 #### Requirements
 
 - Node
-- Angula-Cli
 - npm
 
 ### Instruction
